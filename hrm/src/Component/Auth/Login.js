@@ -24,7 +24,6 @@ export class Login extends Component {
   }
 
   static getDerivedStateFromProps(nextProps, prevState) {
-    console.log(nextProps);
     let update = {};
     switch (nextProps.loginAction.type) {
       case "GET_AUTHENTICATION_SUCCESS":
@@ -39,10 +38,7 @@ export class Login extends Component {
         update.loading = false;
         update.iconLoading = false;
         alert(nextProps.loginAction.message);
-        // update.username= null;
-        // update.password= null;
-        // update.submitted= false;
-        // update.animate=false;
+       
         return prevState.mounted ? update : null;
       case "GET_AUTHENTICATION_FAIL":
         update.isError = true;

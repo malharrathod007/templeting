@@ -57,8 +57,8 @@ app.post('/api/form',(req,res)=>{
                 return err
             }
             return info.Email
-            // console.log('message sent to',info.Email);
-            // console.log('message URL is',nodemailer.getTestMessageUrl(info));
+            console.log('message sent to',info.Email);
+            console.log('message URL is',nodemailer.getTestMessageUrl(info));
         })
     })
 })

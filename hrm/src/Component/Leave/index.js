@@ -48,7 +48,6 @@ export class index extends Component {
   componentDidMount() {
     var oldItems = JSON.parse(localStorage.getItem("usersdata")) || [];
     // this.setState({})
-    console.log(oldItems);
     this.setState({ data: oldItems });
   }
   showModal = () => {
@@ -100,7 +99,6 @@ export class index extends Component {
     this.setState({ Leave });
 
     var oldItems = JSON.parse(localStorage.getItem("usersdata")) || [];
-    console.log(Leave);
     oldItems.push(Leave);
     localStorage.setItem("usersdata", JSON.stringify(oldItems));
 
@@ -116,7 +114,6 @@ export class index extends Component {
         leaveReason: ""
       }
     });
-    console.log(Leave);
   }
   async save(e) {
     var oldItems = JSON.parse(localStorage.getItem("authData"));

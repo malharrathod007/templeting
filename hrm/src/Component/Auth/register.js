@@ -55,15 +55,12 @@ export class register extends Component {
   };
 
   onBlur = () => {
-    console.log("blur");
   };
 
   onFocus = () => {
-    console.log("focus");
   };
 
   onSearch = val => {
-    console.log("search:", val);
   };
   onChange = (e, type) => {
     const user = { ...this.state.user };
@@ -102,7 +99,6 @@ export class register extends Component {
         errMsgPrint = errorMsg;
       }
     }
-    console.log(this.state);
     return (
       <div>
         <Card className="CArdStyle" style={{ width: 500 }}>
