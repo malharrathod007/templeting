@@ -1,0 +1,76 @@
+import styled from 'styled-components';
+
+const ZsInputWrapper = styled.div`
+    position:relative;
+
+    .zsInput{
+       
+        background-color: transparent !important;
+        height: 40px !important;
+        border-radius: 0;
+        width:100%;
+        padding:0 10px;
+        border: solid 1px #18c6ff;
+
+        font-size: 16px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 50px;
+        letter-spacing: normal;
+        text-align: left;
+        color: #ffffff;
+
+        &:focus{
+            box-shadow: none !important;
+            outline: none !important;
+        }
+        .fileUpload {
+            position: relative;
+            overflow: hidden;
+        }
+    }
+
+    .disabledInput{
+        pointer-events:none;
+        opacity:0.35;
+    }
+
+    .zsInput ~ .plcHldr{
+        position: absolute; 
+        left: 10px; 
+        top: 6px; 
+        transition: 0.3s; 
+        z-index: 2; 
+        padding:0 5px;
+        font-size: 13px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.83;
+        letter-spacing: normal;
+        text-align: left;
+        color: rgba(255, 255, 255, 0.5);
+
+        // width: calc(100% - 20px);
+        overflow:hidden;
+        white-space:nowrap;
+        text-overflow:ellipsis;
+    }
+
+    .zsInput:focus ~ .plcHldr, .has-content.zsInput ~ .plcHldr{
+        top: -10px; 
+        background:#07202b;  
+        transition: 0.3s;
+        color: rgba(255, 255, 255, 0.75);
+    }
+
+    .fillBox ~ .plcHldr, .has-content.zsInput ~ .plcHldr{
+        top: -10px !important; 
+        background:#07202b !important;  
+        transition: 0.3s !important;
+        color: rgba(255, 255, 255, 0.75) !important;
+    }
+`;
+
+export default ZsInputWrapper;
